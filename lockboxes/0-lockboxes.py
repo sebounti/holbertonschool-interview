@@ -3,6 +3,7 @@
 Write a method that determines if all the boxes can be opened.
 """
 
+
 def canUnlockAll(boxes):
     """
     Détermine si toutes les boîtes peuvent être déverrouillées en utilisant
