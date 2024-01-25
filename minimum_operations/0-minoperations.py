@@ -21,7 +21,7 @@ def minOperations(n):
     If n is 1 or less, which is trivially achieved, returns 0.
     """
 
-    ''' If n is 1 or less, no operations are needed as we start with one 'H''''
+    ''' If n is 1 or less, no operations are needed as we start with one 'H'''
     if n <= 1:
         return 0
     else:
