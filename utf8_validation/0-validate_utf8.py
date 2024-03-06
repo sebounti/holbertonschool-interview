@@ -2,6 +2,8 @@
 """
 Main file for testing
 """
+
+
 def validUTF8(data):
     # Nombre de bytes dans le caractère UTF-8
     n_bytes = 0
@@ -15,7 +17,8 @@ def validUTF8(data):
         if n_bytes == 0:
             # Comptez le nombre de 1 au début
             for bit in bin_rep:
-                if bit == '0': break
+                if bit == '0':
+                    break
                 n_bytes += 1
 
             # Caractères d'un byte
