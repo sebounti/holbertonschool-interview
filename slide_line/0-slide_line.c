@@ -2,7 +2,7 @@
 #include "slide_line.h"
 
 
-/**
+/*
  * merge - Performs move in  2048 Single Line Game
  *
  * @line: points to an array of integers containing size elements, that must be
@@ -50,7 +50,7 @@ void merge(int *line, int move, int i, int start,
 }
 
 
-/**
+/*
  * slide_line - slides and merges an array of integers
  *
  * @line: points to an array of integers containing size elements, that must be
