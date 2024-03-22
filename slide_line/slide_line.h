@@ -1,4 +1,4 @@
-// slide_line.h
+/* slide_line*/
 
 #ifndef SLIDE_LINE_H
 #define SLIDE_LINE_H
