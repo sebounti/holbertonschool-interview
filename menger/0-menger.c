@@ -2,7 +2,7 @@
 #include <math.h>
 
 /**
- * imprimer_caractere_menger - Vérifie si la position est au centre d'un bloc 3x3
+ * imprimer_caractere_menger - Vérifie si position est au centre d'un bloc 3x3
  * @x: position horizontale
  * @y: position verticale
  * @niveau: niveau de l'éponge de Menger
@@ -10,15 +10,18 @@
  * Return: Void.
  */
 void imprimer_caractere_menger(int x, int y, int niveau)
-{  int i;
-for (i = 0; i < niveau; ++i)
+{
+	int i;
+
+	for (i = 0; i < niveau; ++i)
 	{
 		if (x % 3 == 1 && y % 3 == 1)
-		{	putchar(' ');
+		{
+			putchar(' ');
 			return;
-			}
-	x /= 3;
-	y /= 3;
+		}
+		x /= 3;
+		y /= 3;
 	}
 	putchar('#');
 }
@@ -30,17 +33,22 @@ for (i = 0; i < niveau; ++i)
  * Return: Void.
  */
 void menger(int niveau)
-{	int taille, y, x;
+{
+	int taille, y, x;
+
 	if (niveau < 0)
+	{
 		return;
+	}
 
 	taille = pow(3, niveau);
 
 	for (y = 0; y < taille; ++y)
+	{
+		for (x = 0; x < taille; ++x)
 		{
-			for (x = 0; x < taille; ++x)
-			{imprimer_caractere_menger(x, y, niveau);
-			}
-	putchar('\n');
+			imprimer_caractere_menger(x, y, niveau);
+		}
+		putchar('\n');
 	}
 }
