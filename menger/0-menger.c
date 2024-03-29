@@ -1,30 +1,46 @@
 #include <stdio.h>
 #include <math.h>
 
-void imprimer_caractere_menger(int x, int y, int niveau) {
-    int i;
-    for (i = 0; i < niveau; ++i) {
-        /* Vérifier si la position courante est au centre d'un bloc 3x3 */
-        if (x % 3 == 1 && y % 3 == 1) {
-            putchar(' ');
-            return;
-        }
-        x /= 3;
-        y /= 3;
-    }
-    putchar('#');
+/**
+ * imprimer_caractere_menger - Vérifie si la position est au centre d'un bloc 3x3
+ * @x: position horizontale
+ * @y: position verticale
+ * @niveau: niveau de l'éponge de Menger
+ *
+ * Return: Void.
+ */
+void imprimer_caractere_menger(int x, int y, int niveau)
+{  int i;
+for (i = 0; i < niveau; ++i)
+	{
+		if (x % 3 == 1 && y % 3 == 1)
+		{	putchar(' ');
+			return;
+			}
+	x /= 3;
+	y /= 3;
+	}
+	putchar('#');
 }
 
-void menger(int niveau) {
-    int taille, y, x; /* Déclaration des variables au début de la fonction */
-    if (niveau < 0) return; /* Ne rien faire si le niveau est inférieur à 0 */
+/**
+ * menger - Dessine une éponge de Menger 2D de niveau donné
+ * @niveau: niveau de l'éponge de Menger à dessiner
+ *
+ * Return: Void.
+ */
+void menger(int niveau)
+{	int taille, y, x;
+	if (niveau < 0)
+		return;
 
-    taille = pow(3, niveau); /* Calculer la taille de l'éponge */
+	taille = pow(3, niveau);
 
-    for (y = 0; y < taille; ++y) {
-        for (x = 0; x < taille; ++x) {
-            imprimer_caractere_menger(x, y, niveau);
-        }
-        putchar('\n'); /* Nouvelle ligne à la fin de chaque rangée */
-    }
+	for (y = 0; y < taille; ++y)
+		{
+			for (x = 0; x < taille; ++x)
+			{imprimer_caractere_menger(x, y, niveau);
+			}
+	putchar('\n');
+	}
 }
