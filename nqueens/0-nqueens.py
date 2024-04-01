@@ -2,13 +2,16 @@
 
 import sys
 
+
 def print_usage():
     print("Usage: nqueens N")
     sys.exit(1)
 
+
 def print_erreur(message):
     print(message)
     sys.exit(1)
+
 
 def position_valide(echiquier, ligne, colonne, N):
     # Vérifie cette ligne sur le côté gauche
@@ -28,6 +31,7 @@ def position_valide(echiquier, ligne, colonne, N):
 
     return True
 
+
 def resoudre_nqueens(echiquier, colonne, N):
     # Cas de base : si toutes les reines sont placées
     if colonne >= N:
@@ -46,6 +50,7 @@ def resoudre_nqueens(echiquier, colonne, N):
             resoudre_nqueens(echiquier, colonne + 1, N)
             echiquier[i][colonne] = 0  # retour en arrière (backtrack)
 
+
 def main():
     if len(sys.argv) != 2:
         print_usage()
@@ -60,6 +65,7 @@ def main():
 
     echiquier = [[0 for _ in range(N)] for _ in range(N)]
     resoudre_nqueens(echiquier, 0, N)
+
 
 if __name__ == "__main__":
     main()
