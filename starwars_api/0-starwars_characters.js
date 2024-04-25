@@ -2,12 +2,12 @@
 // Récupère les arguments passés à partir de la ligne de commande
 const argv = process.argv;
 // URL de base pour accéder à l'API des films de Star Wars
-const urlFilm = "https://swapi-api.hbtn.io/api/films/";
+const urlFilm = 'https://swapi-api.hbtn.io/api/films/';
 // Construit l'URL pour un film spécifique en utilisant l'ID passé comme argume
 const urlMovie = `${urlFilm}${argv[2]}/`;
 
 // Importe le module "request" pour faire des requêtes HTTP
-const request = require("request");
+const request = require('request');
 
 // Effectue une requête HTTP GET pour obtenir les données du film
 request(urlMovie, function (error, response, body) {
@@ -32,7 +32,7 @@ request(urlMovie, function (error, response, body) {
 });
 
 // Fonction récursive pour traiter chaque URL de personnage
-function CharRequest(idx, url, characters, limit) {
+function CharRequest (idx, url, characters, limit) {
   // Vérifie si tous les personnages ont été traités
   if (idx === limit) {
     return;
@@ -50,7 +50,7 @@ function CharRequest(idx, url, characters, limit) {
       CharRequest(idx, characters[idx], characters, limit);
     } else {
       // Log toute erreur rencontrée lors de la requête du personnage
-      console.error("error:", error);
+      console.error('error:', error);
     }
   });
 }
