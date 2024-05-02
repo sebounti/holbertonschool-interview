@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+''' rain module'''
+
 def rain(walls):
     """
     Calculate the amount of rainwater trapped after it rains given the heights.
