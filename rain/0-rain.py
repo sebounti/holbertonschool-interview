@@ -2,10 +2,10 @@
 
 def rain(walls):
     """
-    Calculate the amount of rainwater trapped after it rains given the heights of walls.
+    Calculate the amount of rainwater trapped after it rains given the heights.
 
     Parameters:
-        walls (list of int): A list of non-negative integers representing the heights of walls.
+        walls (list of int): A list of non-negative integers
 
     Returns:
         int: The total amount of rainwater retained.
