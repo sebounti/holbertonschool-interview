@@ -1,1 +1,1 @@
-# 0x1E. Wild Compare
+project interview - task Wild Compare
